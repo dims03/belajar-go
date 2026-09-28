@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // Basic deklarasi variabel
 
 // func main() {
@@ -146,4 +148,123 @@ package main
 // 	} else {
 // 		fmt.Println("Hasil:", hasil)
 // 	}
+// }
+
+// Basic Struct
+
+// type Orang struct {
+// 	Nama string
+// 	Umur int
+// 	Kota string
+// }
+
+// func main() {
+// 	orang1 := Orang {
+// 		Nama: "Dimas",
+// 		Umur: 30,
+// 		Kota: "Balikpapan",
+// 	}
+
+// 	fmt.Println("Nama:", orang1.Nama)
+// 	fmt.Println("Umur:", orang1.Umur)
+// 	fmt.Println("Kota:", orang1.Kota)
+// 	fmt.Println("Semua data:", orang1)
+// }
+
+// type Orang struct {
+// 	Nama string
+// 	Umur int
+// 	Kota string
+// }
+
+// func main() {
+// 	orang1 := Orang{Nama: "Dimas", Umur: 30, Kota: "Balikpapan"}
+// 	orang2 := Orang{Nama: "Riyani", Umur: 29, Kota: "Samarinda"}
+
+// 	daftarOrang := []Orang{orang1, orang2}
+
+// 	for _, orang := range daftarOrang {
+// 		fmt.Println(orang.Nama, "-", orang.Umur, "tahun -", orang.Kota)
+// 	}
+// }
+
+//  Struct & Function
+
+// type Orang struct {
+// 	Nama string
+// 	Umur int
+// 	Kota string
+// }
+
+// func (o Orang) Sapa() {
+// 	fmt.Println("Halo, nama saya", o.Nama, "dari", o.Kota)
+// }
+
+// func main() {
+// 	orang1 := Orang{Nama: "Dimas", Umur: 30, Kota: "Balikpapan"}
+// 	orang1.Sapa()
+// }
+
+// type Orang struct {
+// 	Nama string
+// 	Umur int
+// 	Kota string
+// }
+
+// func (o Orang) SudahDewasa() bool {
+// 	return o.Umur >= 18
+// }
+
+// func main() {
+// 	orang1 := Orang{Nama: "Dimas", Umur: 30, Kota: "Balikpapan"}
+// 	orang2 := Orang{Nama: "Riyani", Umur: 15, Kota: "Samarinda"}
+
+// 	fmt.Println(orang1.Nama, "sudah dewasa:", orang1.SudahDewasa())
+// 	fmt.Println(orang2.Nama, "sudah dewasa:", orang2.SudahDewasa())
+// }
+
+// Pointer
+
+// func main() {
+// 	angka := 10
+// 	pointerAngka := &angka
+
+// 	fmt.Println("Nilai angka:", angka)
+// 	fmt.Println("Alamat memori angka:", pointerAngka)
+// 	fmt.Println("Nilai yang ditunjuk pointer:", *pointerAngka)
+// }
+
+// func tambahSepuluh(angka int) {
+// 	angka = angka + 10
+// }
+
+// func tambahSepuluhPointer(angka *int) {
+// 	*angka = *angka + 10
+// }
+
+// func main() {
+// 	nilai1 := 20
+// 	tambahSepuluh(nilai1)
+// 	fmt.Println("Setelah tambahSepuluh:", nilai1)
+
+// 	nilai2 := 5
+// 	tambahSepuluhPointer(&nilai2)
+// 	fmt.Println("Setelah tambahSepuluhPointer:", nilai2)
+// }
+
+//  struct + pointer
+
+// type Orang struct {
+// 	Nama string
+// 	Umur int
+// }
+
+// func (o *Orang) TambahUmur() {
+// 	o.Umur = o.Umur +1
+// }
+
+// func main() {
+// 	orang1 := Orang{Nama: "Dimas", Umur: 30}
+// 	orang1.TambahUmur()
+// 	fmt.Println(orang1.Nama, "sekarang umur:", orang1.Umur)
 // }
